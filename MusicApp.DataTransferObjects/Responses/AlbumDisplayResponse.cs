@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicApp.DataTransferObjects.Responses.Album
+namespace MusicApp.DataTransferObjects.Responses
 {
     public class AlbumDisplayResponse
     {

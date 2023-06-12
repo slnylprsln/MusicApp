@@ -14,7 +14,6 @@ namespace MusicApp.Infrastructure.Data
             seedArtistIfNotExists(dbContext);
             seedAlbumIfNotExists(dbContext);
             seedSongIfNotExists(dbContext);
-            seedUserIfNotExists(dbContext);
         }
 
         private static void seedArtistIfNotExists(MusicDbContext dbContext)
@@ -64,21 +63,6 @@ namespace MusicApp.Infrastructure.Data
                 };
 
                 dbContext.Songs.AddRange(songs);
-                dbContext.SaveChanges();
-            }
-        }
-
-        private static void seedUserIfNotExists(MusicDbContext dbContext)
-        {
-            if (!dbContext.Users.Any())
-            {
-                var users = new List<User>() {
-                 new() { NameSurname = "Selenay Alparslan", Email = "test1@gmail.com", Password = "1234Abcd!", Role = Role.Admin, Username = "selenaya" },
-                 new() { NameSurname = "Türkay Ürkmez", Email = "test2@gmail.com", Password = "1234Abcd!", Role = Role.Admin, Username = "turkayu" },
-                 new() { NameSurname = "İsim Soyisim", Email = "test3@gmail.com", Password = "1234Abcd!", Role = Role.Listener, Username = "isims" },
-                };
-
-                dbContext.Users.AddRange(users);
                 dbContext.SaveChanges();
             }
         }

@@ -7,8 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\" />
-    <Folder Include="Mappings\" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MusicApp.DataTransferObjects\MusicApp.DataTransferObjects.csproj" />
+    <ProjectReference Include="..\MusicApp.Entities\MusicApp.Entities.csproj" />
+    <ProjectReference Include="..\MusicApp.Infrastructure\MusicApp.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

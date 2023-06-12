@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicApp.Infrastructure.Repositories
+namespace MusicApp.Infrastructure.Repositories.Interfaces
 {
     public interface IRepository<T> where T : class, IEntity, new()
     {

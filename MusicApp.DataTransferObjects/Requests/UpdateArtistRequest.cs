@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicApp.DataTransferObjects.Requests.Artist
+namespace MusicApp.DataTransferObjects.Requests
 {
     public class UpdateArtistRequest
     {

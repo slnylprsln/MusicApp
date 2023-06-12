@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicApp.DataTransferObjects.Requests.Album
+namespace MusicApp.DataTransferObjects.Requests
 {
-    public class UpdateAlbumRequest
+    public class CreateNewAlbumRequest
     {
-        public int Id { get; set; }
         public string AlbumName { get; set; }
         public int? ArtistId { get; set; }
         public string? Description { get; set; }

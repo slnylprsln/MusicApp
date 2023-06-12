@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MusicApp.Entities;
 using MusicApp.Infrastructure.Data;
+using MusicApp.Infrastructure.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicApp.Infrastructure.Repositories.Artist
+namespace MusicApp.Infrastructure.Repositories
 {
     public class ArtistRepository : IArtistRepository
     {
@@ -18,7 +20,7 @@ namespace MusicApp.Infrastructure.Repositories.Artist
             musicDbContext = MusicDbContext;
         }
 
-        public async Task CreateAsync(Entities.Artist entity)
+        public async Task CreateAsync(Artist entity)
         {
             await musicDbContext.Artists.AddAsync(entity);
             await musicDbContext.SaveChangesAsync();
@@ -31,27 +33,27 @@ namespace MusicApp.Infrastructure.Repositories.Artist
             await musicDbContext.SaveChangesAsync();
         }
 
-        public Entities.Artist? Get(int id)
+        public Artist? Get(int id)
         {
             return musicDbContext.Artists.FirstOrDefault(c => c.Id == id);
         }
 
-        public IList<Entities.Artist?> GetAll()
+        public IList<Artist?> GetAll()
         {
             return musicDbContext.Artists.ToList();
         }
 
-        public async Task<IList<Entities.Artist?>> GetAllAsync()
+        public async Task<IList<Artist?>> GetAllAsync()
         {
             return await musicDbContext.Artists.ToListAsync();
         }
 
-        public IList<Entities.Artist> GetAllWithPredicate(Expression<Func<Entities.Artist, bool>> predicate)
+        public IList<Artist> GetAllWithPredicate(Expression<Func<Artist, bool>> predicate)
         {
             return musicDbContext.Artists.Where(predicate).ToList();
         }
 
-        public async Task<Entities.Artist?> GetAsync(int id)
+        public async Task<Artist?> GetAsync(int id)
         {
             return await musicDbContext.Artists.FirstOrDefaultAsync(c => c.Id == id);
         }
@@ -61,7 +63,7 @@ namespace MusicApp.Infrastructure.Repositories.Artist
             throw new NotImplementedException();
         }
 
-        public async Task UpdateAsync(Entities.Artist entity)
+        public async Task UpdateAsync(Artist entity)
         {
             musicDbContext.Artists.Update(entity);
             await musicDbContext.SaveChangesAsync();

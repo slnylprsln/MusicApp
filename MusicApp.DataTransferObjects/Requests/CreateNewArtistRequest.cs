@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicApp.DataTransferObjects.Responses.Artist
+namespace MusicApp.DataTransferObjects.Requests
 {
-    public class ArtistDisplayResponse
+    public class CreateNewArtistRequest
     {
-        public int Id { get; set; }
         public string ArtistName { get; set; }
         public string Nationality { get; set; }
     }
