@@ -36,9 +36,9 @@ namespace MusicApp.Infrastructure.Data
             if (!dbContext.Albums.Any())
             {
                 var albums = new List<Album>() {
-                 new() { AlbumName = "Midnights", Description = "...", Price = 20, ArtistId = 1, ImageUrl = "https://upload.wikimedia.org/wikipedia/en/9/9f/Midnights_-_Taylor_Swift.png" },
-                 new() { AlbumName = "NOEASY", Description = "...", Price = 17, ArtistId = 2, ImageUrl = "https://i.scdn.co/image/ab67616d0000b2731843897a2a72dd5036bbb1fc" },
-                 new() { AlbumName = "CALM", Description = "...", Price = 18, ArtistId = 3, ImageUrl = "https://data.opus3a.com/product_photo/8b/8bb0e7c9bd443833e2e5c99060895e2b/MAX/c205deb3cd2fb3879221006b0f8f95a7.jpg" },
+                 new() { AlbumName = "Midnights", Description = "Midnights is the tenth studio album by American singer-songwriter Taylor Swift", Price = 20, ArtistId = 1, ImageUrl = "https://upload.wikimedia.org/wikipedia/en/9/9f/Midnights_-_Taylor_Swift.png" },
+                 new() { AlbumName = "NOEASY", Description = "NOEASY is the second studio album to be recorded by South Korean boy group Stray Kids", Price = 17, ArtistId = 2, ImageUrl = "https://i.scdn.co/image/ab67616d0000b2731843897a2a72dd5036bbb1fc" },
+                 new() { AlbumName = "CALM", Description = "CALM is the fourth studio album by Australian pop rock band 5 Seconds of Summer", Price = 18, ArtistId = 3, ImageUrl = "https://data.opus3a.com/product_photo/8b/8bb0e7c9bd443833e2e5c99060895e2b/MAX/c205deb3cd2fb3879221006b0f8f95a7.jpg" },
                 };
 
                 dbContext.Albums.AddRange(albums);

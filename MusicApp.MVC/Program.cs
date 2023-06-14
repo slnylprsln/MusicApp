@@ -1,7 +1,39 @@
+using MusicApp.MVC.Extensions;
+using MusicApp.Infrastructure.Data;
+using MusicApp.Services.Mappings;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddAutoMapper(typeof(MapProfile));
+
+builder.Services.AddSession(opt =>
+{
+    opt.IdleTimeout = TimeSpan.FromMinutes(15);
+});
+
+var connectionString = builder.Configuration.GetConnectionString("db");
+builder.Services.AddInjections(connectionString);
+
+//builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(opt =>
+                {
+                    opt.LoginPath = "/Users/Login";
+                    opt.AccessDeniedPath = "/Users/AccessDenied";
+                    opt.ReturnUrlParameter = "gidilecekSayfa";
+                });
+
+builder.Services.AddMemoryCache();
+builder.Services.AddResponseCaching(opt =>
+{
+    opt.SizeLimit = 100000;
+});
 
 var app = builder.Build();
 
@@ -13,11 +45,21 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+using var scope = app.Services.CreateScope();
+var services = scope.ServiceProvider;
+var context = services.GetRequiredService<MusicDbContext>();
+context.Database.EnsureCreated();
+DbSeeding.SeedDatabase(context);
+
 app.UseHttpsRedirection();
+app.UseResponseCaching();
 app.UseStaticFiles();
+
+app.UseSession();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

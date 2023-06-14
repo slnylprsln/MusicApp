@@ -1,0 +1,11 @@
+﻿@model AlbumDisplayResponse
+<div class="card">
+    <img src="@Model.ImageUrl" class="img-fluid" />
+    <div class="card-body">
+        <h4 class="card-title">@Model.AlbumName</h4>
+        <p class="card-text">@Model.Description</p>
+        <p class="card-text">@Model.Price $</p>
+        <button class="btn btn-success basket" data-id="@Model.Id">Add to Shopping Cart</button>
+    </div>
+
+</div>

@@ -58,9 +58,9 @@ namespace MusicApp.Infrastructure.Repositories
             return await musicDbContext.Albums.FirstOrDefaultAsync(c => c.Id == id);
         }
 
-        public Task<bool> IsExistsAsync(int id)
+        public async Task<bool> IsExistsAsync(int id)
         {
-            throw new NotImplementedException();
+            return await musicDbContext.Albums.AnyAsync(c => c.Id == id);
         }
 
         public async Task UpdateAsync(Album entity)

@@ -1,0 +1,41 @@
+﻿@model AlbumCollection
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Shopping Cart</h1>
+@if (Model.AlbumItems.Count == 0)
+{
+    <div class="alert alert-danger">
+        There is no album in your shopping cart!
+    </div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Album Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Sub-total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var albumItem in Model.AlbumItems)
+            {
+                <tr>
+                    <td>@albumItem.Album.AlbumName</td>
+                    <td>@albumItem.Album.Price $</td>
+                    <td>@albumItem.Quantity</td>
+                    <td>@(albumItem.Quantity * albumItem.Album.Price) $</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Total: @Model.TotalAlbumPrice() $</td>
+            </tr>
+        </tfoot>
+    </table>
+}

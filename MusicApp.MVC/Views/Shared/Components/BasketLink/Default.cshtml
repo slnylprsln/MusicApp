@@ -1,0 +1,13 @@
+﻿@model AlbumCollection
+@if (Model == null)
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Shopping" asp-action="Index">Shopping Cart</a>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Shopping" asp-action="Index">Shopping Cart <span class="badge rounded-pill bg-black">@Model.TotalAlbumsCount()</span> </a>
+    </li>
+}
