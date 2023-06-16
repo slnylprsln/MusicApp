@@ -11,9 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MusicApp.DataTransferObjects\MusicApp.DataTransferObjects.csproj" />
-    <ProjectReference Include="..\MusicApp.Entities\MusicApp.Entities.csproj" />
-    <ProjectReference Include="..\MusicApp.Infrastructure\MusicApp.Infrastructure.csproj" />
+    <ProjectReference Include="C:\Users\alpar\source\repos\MusicApp\Application\MusicApp.DataTransferObjects\MusicApp.DataTransferObjects.csproj" />
+    <ProjectReference Include="C:\Users\alpar\source\repos\MusicApp\Domain\MusicApp.Entities\MusicApp.Entities.csproj" />
+    <ProjectReference Include="C:\Users\alpar\source\repos\MusicApp\Infrastructure\MusicApp.Infrastructure\MusicApp.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

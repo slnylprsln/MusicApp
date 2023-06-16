@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MusicApp.Services\MusicApp.Services.csproj" />
+    <ProjectReference Include="C:\Users\alpar\source\repos\MusicApp\Application\MusicApp.Services\MusicApp.Services.csproj" />
   </ItemGroup>
 
 </Project>

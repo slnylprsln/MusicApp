@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MusicApp.Entities\MusicApp.Entities.csproj" />
+    <ProjectReference Include="C:\Users\alpar\source\repos\MusicApp\Domain\MusicApp.Entities\MusicApp.Entities.csproj" />
   </ItemGroup>
 
 </Project>

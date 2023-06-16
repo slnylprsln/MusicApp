@@ -7,17 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicApp.MVC", "MusicApp.MV
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{CAB00192-A3EF-4202-9148-026D005CFAB8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicApp.DataTransferObjects", "..\MusicApp.DataTransferObjects\MusicApp.DataTransferObjects.csproj", "{CFAAD5CF-6DDB-4974-BAF4-CADCA3C5652F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicApp.DataTransferObjects", "C:\Users\alpar\source\repos\MusicApp\Application\MusicApp.DataTransferObjects\MusicApp.DataTransferObjects.csproj", "{CFAAD5CF-6DDB-4974-BAF4-CADCA3C5652F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicApp.Services", "..\MusicApp.Services\MusicApp.Services.csproj", "{58251571-5F2F-4A5B-A6AE-2AAB0635F3FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicApp.Services", "C:\Users\alpar\source\repos\MusicApp\Application\MusicApp.Services\MusicApp.Services.csproj", "{58251571-5F2F-4A5B-A6AE-2AAB0635F3FC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicApp.Entities", "..\MusicApp.Entities\MusicApp.Entities.csproj", "{D650E255-553E-4D27-A7B7-86427411CC63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicApp.Entities", "C:\Users\alpar\source\repos\MusicApp\Domain\MusicApp.Entities\MusicApp.Entities.csproj", "{D650E255-553E-4D27-A7B7-86427411CC63}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{822C3049-DB33-4555-8423-1589563A5F7D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B0F1EAD9-BDB6-4B59-8120-1522DC51D84D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicApp.Infrastructure", "..\MusicApp.Infrastructure\MusicApp.Infrastructure.csproj", "{4B3F5683-0C7A-45B4-BB04-ADF741FD9ADD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicApp.Infrastructure", "C:\Users\alpar\source\repos\MusicApp\Infrastructure\MusicApp.Infrastructure\MusicApp.Infrastructure.csproj", "{4B3F5683-0C7A-45B4-BB04-ADF741FD9ADD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebUI", "WebUI", "{1DB982E3-59AC-4021-BC8C-F4835F75FD0F}"
 EndProject
